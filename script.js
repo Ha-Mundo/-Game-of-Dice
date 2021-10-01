@@ -38,7 +38,7 @@ init();
 const switchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
   currentScore = 0;
-  activePlayer = activePlayer === 0 ? 1 : 0;
+  activePlayer = activePlayer === 0 ? 1 : 0; //reassign the active player, we star always from the player 0(1) so if the player is 0 thant switch to 1(2)
   player0El.classList.toggle("player--active");
   player1El.classList.toggle("player--active");
 };
@@ -52,7 +52,7 @@ btnRoll.addEventListener("click", function () {
 
     // 2.Display dice
     diceEl.classList.remove("hidden");
-    diceEl.src = `dice-${dice}.png`;
+    diceEl.src = `./img/dice-${dice}.png`;
 
     // 3.Check for rolled 1
     if (dice !== 1) {
